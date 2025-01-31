@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech - Home</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Efek Hover untuk Gambar Kursus */
+        .course-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        /* Efek Mengetik untuk Tiga Titik */
+        .typing-dots::after {
+            content: "";
+            display: inline-block;
+            animation: dots 1.5s steps(3, end) infinite;
+        }
+        
+        @keyframes dots {
+            0% { content: ""; }
+            33% { content: "."; }
+            66% { content: ".."; }
+            100% { content: "..."; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans relative overflow-hidden flex flex-col min-h-screen">
+    <div class="animated-bg"></div>
+    
+    <header class="bg-blue-900 text-white py-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-2xl font-bold">EduTech</h1>
+        <nav class="hidden md:flex items-center">
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+                <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+                <li><a href="course.html" class="hover:text-blue-300">Courses</a></li>
+                <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+            </ul>
+            <div class="ml-6 flex space-x-4">
+                <a href="login.html" class="border-2 border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-900 transition">Log In</a>
+                <a href="signup.html" class="bg-white text-blue-900 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white transition">Sign Up</a>
+            </div>
+        </nav>
+        <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-800 p-4">
+        <ul class="space-y-4 text-center">
+            <li><a href="index.html" class="block text-white hover:text-blue-300">Home</a></li>
+            <li><a href="about.html" class="block text-white hover:text-blue-300">About</a></li>
+            <li><a href="course.html" class="block text-white hover:text-blue-300">Courses</a></li>
+            <li><a href="contact.html" class="block text-white hover:text-blue-300">Contact</a></li>
+        </ul>
+        <div class="mt-4 text-center">
+            <a href="login.<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>EduTech - Contact Us</title>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://cdn.tailwindcss.com"></script>
+                </head>
+                <body class="bg-white font-sans text-gray-900">
+                    
+                    <header class="bg-blue-900 text-white py-4 shadow-lg">
+                        <div class="container mx-auto flex justify-between items-center px-6">
+                            <h1 class="text-2xl font-bold">EduTech</h1>
+                            <nav class="hidden md:flex items-center">
+                                <ul class="flex space-x-6">
+                                    <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+                                    <li><a href="about.html" class="hover:text-blue-300">About</a></li>
+                                    <li><a href="course.html" class="hover:text-blue-300">Courses</a></li>
+                                    <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+                                </ul>
+                                <div class="ml-6 flex space-x-4">
+                                    <a href="login.html" class="border-2 border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-900 transition">Log In</a>
+                                    <a href="signup.html" class="bg-white text-blue-900 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white transition">Sign Up</a>
+                                </div>
+                            </nav>
+                            <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">☰</button>
+                        </div>
+                        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 p-4">
+                            <ul class="space-y-4 text-center">
+                                <li><a href="index.html" class="block text-white hover:text-blue-300">Home</a></li>
+                                <li><a href="about.html" class="block text-white hover:text-blue-300">About</a></li>
+                                <li><a href="course.html" class="block text-white hover:text-blue-300">Courses</a></li>
+                                <li><a href="contact.html" class="block text-white hover:text-blue-300">Contact</a></li>
+                            </ul>
+                            <div class="mt-4 text-center">
+                                <a href="login.html" class="border-2 border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-900 transition">Log In</a>
+                                <a href="signup.html" class="bg-white text-blue-900 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white transition">Sign Up</a>
+                            </div>
+                        </div>
+                    </header>
+                    <script>
+                        document.getElementById("menu-toggle").addEventListener("click", function() {
+                            document.getElementById("mobile-menu").classList.toggle("hidden");
+                        });
+                    </script>
+                    
+                    <!-- Contact Section -->
+                    <section class="py-20 px-6 md:px-20 flex flex-col md:flex-row items-center justify-center">
+                        <div class="container mx-auto flex flex-col md:flex-row bg-blue-50 rounded-lg shadow-lg overflow-hidden">
+                            
+                            <!-- Left Section: Google Maps -->
+                            <div class="w-full md:w-1/2 p-10 bg-white">
+                                <iframe class="w-full h-96 md:h-[250px] lg:h-[465px] rounded-lg shadow-md" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345098976!2d144.95373631550447!3d-37.81627974202152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%2C%20Australia!5e0!3m2!1sen!2sus!4v1632766010031!5m2!1sen!2sus" 
+                                    allowfullscreen="" loading="lazy"></iframe>
+                                <div class="mt-4 text-center">
+                                    <h3 class="text-xl font-semibold text-blue-600">Our Office Location</h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Section: Contact Form -->
+                            <div class="w-full md:w-1/2 p-10 bg-white">
+                                <h2 class="text-3xl font-bold text-blue-600">Get in Touch</h2>
+                                <p class="text-gray-700 text-lg mt-4">Let’s begin your journey with us! Fill out the form below and we will get back to you as soon as possible.</p>
+                                
+                                <form id="contactForm" class="mt-6">
+                                    <label class="block text-gray-700 font-semibold">Full Name</label>
+                                    <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900" placeholder="Enter your full name" required>
+                                    
+                                    <label class="block text-gray-700 font-semibold mt-4">Work Email</label>
+                                    <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900" placeholder="Enter your work email" required>
+                                    
+                                    <label class="block text-gray-700 font-semibold mt-4">Phone Number</label>
+                                    <input type="text" id="phone" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900" placeholder="Enter your phone number" required>
+                                    
+                                    <button type="submit" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition">Consult Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Contact Form Validation Script -->
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                            let name = document.getElementById("name").value.trim();
+                            let email = document.getElementById("email").value.trim();
+                            let phone = document.getElementById("phone").value.trim();
+                            
+                            if (name === "" || email === "" || phone === "") {
+                                alert("Please fill out all fields.");
+                                return;
+                            }
+                            alert("Message sent successfully!");
+                        });
+                    </script>
+                    
+                    <footer class="bg-blue-900 text-white py-12 text-center w-full">
+                        <div class="container mx-auto px-6">
+                            <p class="text-lg">&copy; 2025 EduTech. All rights reserved.</p>
+                            <div class="mt-6 text-sm">
+                                <p>Email: contact@edutech.com</p>
+                                <p>Phone: +1 234 567 890</p>
+                                <p>Address: 123 EduTech Street, Tech City</p>
+                            </div>
+                            <div class="mt-4 flex justify-center space-x-6">
+                                <a href="#" class="hover:opacity-80"><img src="assets/facebook.png" alt="Facebook" class="w-8 h-8"></a>
+                                <a href="#" class="hover:opacity-80"><img src="assets/instagram.png" alt="Instagram" class="w-8 h-8"></a>
+                                <a href="#" class="hover:opacity-80"><img src="assets/linkedin.png" alt="LinkedIn" class="w-8 h-8"></a>
+                            </div>
+                        </div>
+                    </footer>
+                </body>
+                </html>" class="border-2 border-white text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-blue-900 transition">Log In</a>
+            <a href="signup.html" class="bg-white text-blue-900 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 hover:text-white transition">Sign Up</a>
+        </div>
+    </div>
+</header>
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+</script>
+    
+<!-- Hero Section -->
+<section class="bg-white py-20 md:py-28 text-center flex flex-col justify-center flex-grow">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-24 text-center md:text-left">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">Welcome to <span class="text-blue-600">EduTech</span></h1>
+                <p class="mt-4 text-gray-700 text-base md:text-lg lg:text-xl">Learn Anytime, Anywhere <span class="typing-dots"></span></p>
+                <div class="mt-6 flex flex-row justify-center md:justify-start space-x-4">
+                    <a href="contact.html" class="bg-blue-900 text-white px-4 py-2 md:px-5 md:py-2.5 rounded-full text-sm md:text-base font-semibold shadow-lg hover:bg-blue-700 hover:opacity-80 transition">Consult Now</a>
+                    <a href="course.html" class="border-2 border-blue-600 text-blue-600 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-sm md:text-base font-semibold hover:bg-blue-600 hover:text-white transition">Explore Courses</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
+                    <img src="assets/gambar1.jpg" alt="Student 1" class="w-32 md:w-40 lg:w-48 h-32 md:h-40 lg:h-48 object-cover rounded-3xl shadow-lg course-image">
+                    <img src="assets/gambar2.jpg" alt="Student 2" class="w-32 md:w-40 lg:w-48 h-32 md:h-40 lg:h-48 object-cover rounded-3xl shadow-lg course-image">
+                    <img src="assets/gambar2.jpg" alt="Student 3" class="w-32 md:w-40 lg:w-48 h-32 md:h-40 lg:h-48 object-cover rounded-3xl shadow-lg course-image">
+                    <img src="assets/gambar1.jpg" alt="Student 4" class="w-32 md:w-40 lg:w-48 h-32 md:h-40 lg:h-48 object-cover rounded-3xl shadow-lg course-image">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

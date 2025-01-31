@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EduTech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-10 rounded-lg shadow-lg w-112">
+        <h2 class="text-3xl font-bold text-gray-900 text-center">Selamat datang di <span class="text-blue-600">EduTech</span></h2>
+        <p class="text-center text-gray-600 mt-3">Sudah punya akun? <a href="login.html" class="text-blue-600 font-semibold">Login</a></p>
+        
+        <form class="mt-8" id="signupForm">
+            <label class="block text-gray-700 font-semibold" for="name">Nama sesuai KTP</label>
+            <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Masukkan nama" required>
+            
+            <label class="block text-gray-700 font-semibold mt-4" for="email">Alamat email</label>
+            <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Masukkan email" required>
+            <p id="emailError" class="text-red-600 text-sm mt-1 hidden">Masukkan email yang valid.</p>
+            
+            <label class="block text-gray-700 font-semibold mt-4" for="password">Kata sandi</label>
+            <div class="relative">
+                <input type="password" id="password" class="w-full p-3 border border-gray-300 rounded mt-2 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Masukkan kata sandi" required>
+                <button type="button" id="togglePassword" class="absolute inset-y-0 right-4 flex items-center cursor-pointer text-gray-600"></button>
+            </div>
+            
+            <button type="submit" class="mt-5 w-full bg-blue-600 text-white py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition">Daftar</button>
+        </form>
+        
+        <div class="flex items-center my-6">
+            <hr class="flex-grow border-gray-300">
+            <span class="mx-3 text-gray-400">atau</span>
+            <hr class="flex-grow border-gray-300">
+        </div>
+        
+        <button class="w-full flex items-center justify-center py-3 border border-gray-400 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">
+            <img src="assets/google.png" alt="Google" class="w-6 h-6 mr-3"> Daftar dengan Google
+        </button>
+    </div>
+    
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let emailInput = document.getElementById("email");
+            let emailError = document.getElementById("emailError");
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.classList.remove("hidden");
+                emailInput.classList.add("border-red-500");
+                emailInput.classList.remove("border-gray-300");
+            } else {
+                emailError.classList.add("hidden");
+                emailInput.classList.remove("border-red-500");
+                emailInput.classList.add("border-gray-300");
+                alert("Akun Anda telah berhasil didaftarkan.");
+                emailInput.value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("password").value = "";
+            }
+        });
+        
+        document.getElementById("togglePassword").addEventListener("click", function() {
+            let passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        });
+    </script>
+</body>
+</html>
